@@ -6,7 +6,6 @@ import { Chart as ChartJS } from "chart.js/auto";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bar, Doughnut } from "react-chartjs-2"
-
 import logo from './download.png'
 const Scrape = () => {
     const [username, setInput] = useState("")
