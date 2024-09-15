@@ -8,7 +8,7 @@ async function WebScarpe(username) {
     const browser = await puppeteer.launch({ headless: false});
     try {
         const page = await browser.newPage();
-        page.setDefaultTimeout(20000);
+        page.setDefaultTimeout(15000);
         await page.goto(`https://leetcode.com/${username}/`);
         await page.waitForSelector("span[class='text-[30px] font-semibold leading-[32px]']", { visible: true });
         await page.waitForSelector("div[class='absolute inset-0']", { visible: true })
