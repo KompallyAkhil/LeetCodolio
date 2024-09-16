@@ -51,7 +51,7 @@ const Scrape = () => {
                     <h2>https://leetcode.com/u/ <span> <input onChange={changeInput} onKeyDown={EnterEvent} value={username} placeholder='Enter your Username' autoFocus /></span></h2>
                 </div>
                 <button className='fetch-button' onClick={FetchData}>Fetch Data</button>
-                <ToastContainer theme="colored" position="top-right" pauseOnFocusLoss draggable autoClose={5000} pauseOnHover />
+                <ToastContainer theme="dark" position="top-right" pauseOnFocusLoss draggable autoClose={5000} pauseOnHover />
             </div>
             {data && (
                 <div className='box'>
