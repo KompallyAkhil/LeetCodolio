@@ -5,7 +5,10 @@ const app = express();
 const port = 5000;
 app.use(cors())
 async function WebScarpe(username) {
-    const browser = await puppeteer.launch({ headless: false});
+    const browser = await puppeteer.launch({    args: chrome.args,
+        defaultViewport: chrome.defaultViewport,
+        executablePath: await chrome.executablePath,
+        headless: chrome.headless});
     try {
         const page = await browser.newPage();
         page.setDefaultTimeout(15000);
