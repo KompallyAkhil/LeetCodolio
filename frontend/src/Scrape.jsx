@@ -15,11 +15,13 @@ const Scrape = () => {
     function changeInput(e) {
         setInput(e.target.value);
     }
-    async function FetchData() {
+    async function FetchData(e) {
         setSpinner(true)
         try {
             if (username.length === 0 || username === null) {
-                toast.warn("Enter a username")
+                toast.warn("Enter a username");
+                e.preventDefault();
+                return;
             }
             const response = await axios.get(`http://localhost:5000/scrape/${username}`);
             setData(response.data);
