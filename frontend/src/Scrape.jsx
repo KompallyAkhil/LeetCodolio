@@ -42,8 +42,6 @@ const Scrape = () => {
             FetchData()
         }
     }
-    
-    console.log(data)
     return (
         <>
             <div className='heading'>
